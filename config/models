@@ -1,0 +1,6 @@
+Product json
+    name Text
+    type Text
+    price Int 
+    stocks Int 
+    deriving Show
