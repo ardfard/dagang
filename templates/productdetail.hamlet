@@ -1,0 +1,4 @@
+<ul #productList>
+    $forall product <- productList
+        <li> #{productName product} ${productPrice product}
+    

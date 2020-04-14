@@ -1,0 +1,22 @@
+name: dagang
+version: '0.1.0.0'
+synopsis: Experimental Web Commerce
+category: Web
+author: Ardin Fardiansyah
+maintainer: ardfarde@gmail.com
+license: BSD-3
+homepage: https://github.com/ardfard/dagang
+extra-source-files:
+- CHANGELOG.md
+library:
+  source-dirs: src
+  exposed-modules:
+  - Model
+  dependencies:
+  - persistent
+executables:
+  dagang:
+    main: Main.hs
+    source-dirs: src
+    dependencies:
+    - dagang

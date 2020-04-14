@@ -3,3 +3,7 @@ dist*
 result
 .vscode
 tags
+
+shell.nix
+.env
+.out

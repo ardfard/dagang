@@ -7,6 +7,7 @@ import qualified Database.Persist.Postgresql as Post
 import Database.Persist
 import Control.Monad.Logger (runStderrLoggingT)
 import Control.Monad.IO.Class (liftIO)
+import ClassyPrelude
 
 connstr = "host=localhost dbname=ardfard user=ardfard port=5432"
 main :: IO ()
