@@ -11,9 +11,7 @@ in {
   dagang-shell = haskellPackages.shellFor {
     packages = p: [drv];
     buildInputs = with pkgs; with haskellPackages;
-    [ postgresql
-      hpack 
-      cabal-install
+    [ cabal-install 
       ghcide.ghcide-ghc865
     ];
   };
