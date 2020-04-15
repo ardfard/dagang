@@ -5,15 +5,16 @@ sources = import ./nix/sources.nix;
 pkgs = (import sources.nixpkgs {}).pkgs;
 haskellPackages = pkgs.haskell.packages.${compiler};
 drv = haskellPackages.callCabal2nix "dagang" ./. {};
-all-hies = import sources.all-hies {};
+ghcide = import sources.ghcide-nix {};
 in {
   dagang = drv;
   dagang-shell = haskellPackages.shellFor {
     packages = p: [drv];
     buildInputs = with pkgs; with haskellPackages;
     [ postgresql
-      (all-hies.selection { selector = p: { inherit (p) ghc865; }; })
-        hpack cabal-install
+      hpack 
+      cabal-install
+      ghcide.ghcide-ghc865
     ];
   };
 }
