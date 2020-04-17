@@ -13,6 +13,7 @@ in {
     buildInputs = with pkgs; with haskellPackages;
     [ cabal-install 
       ghcide.ghcide-ghc865
+      yesod-bin
     ];
   };
 }
